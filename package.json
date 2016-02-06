@@ -1,5 +1,5 @@
 {
-  "name": "overseer",
+  "name": "rrep-stack",
   "version": "0.1.0",
   "scripts": {
     "start": "npm run dev && webpack-dev-server --hot --progress --colors --devtool source-map --config webpack.config.js",
