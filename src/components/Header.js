@@ -3,7 +3,7 @@ import React from "react";
 class Header extends React.Component {
   render() {
     return (
-      <div className = "pure-menu pure-menu-horizontal">
+      <div className = "pure-menu pure-menu-horizontal header-style">
         <a href="#" className="pure-menu-heading pure-menu-link">BRAND</a>
         <ul className="pure-menu-list">
             <li className="pure-menu-item"><a href="#" className="pure-menu-link">News</a></li>
