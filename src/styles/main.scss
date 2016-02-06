@@ -1,8 +1,19 @@
-.pure-menu-list {
-  margin-bottom: 20px;
+.header-style{
+	background-color: #86C5DA;	
+	.pure-menu-heading {
+		color: Black;
+		font-weight: bold;
+	}
 
-  .pure-menu-item {
-    background-color: blue;
-    padding: 10px;
-  }
+	.pull-right{
+		float: right;
+	}
+	.pure-menu-list {
+		.pure-menu-item {
+			color: Black;
+		}
+		.pure-menu-link{
+			color: Black;
+		}
+	}
 }
