@@ -1,5 +1,5 @@
 import webpack              from "webpack";
-import webpackConfig        from "../webpack.config.dev.js";
+import webpackConfig        from "../webpack.config.js";
 import webpackDevMiddleware from "webpack-dev-middleware";
 import webpackHotMiddleware from "webpack-hot-middleware";
 import morgan               from "morgan";
@@ -22,7 +22,7 @@ app.get("/*", (req, res) => {
 });
 
 // Start server
-https.createServer(options, app).listen(port, (error) => {
+app.listen(port, (error) => {
   if (error) {
     console.error(error);
   } else {
