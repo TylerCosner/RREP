@@ -1,18 +1,21 @@
-FROM mhart/alpine-node:5.1
+FROM mhart/alpine-node:5.5.0
 
-COPY package.json /usr/src/package.json
-WORKDIR /usr/src
+COPY package.json /app/package.json
+WORKDIR /app
 
 RUN apk --update add git gcc g++ make python && \
-    npm install -g webpack@2.0.7-beta eslint babel-eslint mocha --loglevel warn && \
-    npm install --loglevel warn && \
+    npm install -g webpack@2.0.7-beta eslint babel-eslint mocha && \
+    npm install && \
     rm -rf /var/cache/apk/*
 
-COPY . /usr/src/app
-WORKDIR /usr/src/app
+COPY src /app/src
+COPY test /app/test
+COPY .babelrc /app/.babelrc
+COPY .eslintignore /app/.eslintignore
+COPY .eslintrc /app/.eslintrc
+COPY webpack.config.js /app/webpack.config.js
 
-RUN mv /usr/src/node_modules /usr/src/app/node_modules && \
-    npm run build
+RUN npm run build
 
 EXPOSE 8080
 
