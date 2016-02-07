@@ -31,7 +31,7 @@ if (process.env.NODE_ENV !== "production") {
     if (server) server.close();
 
     Object.keys(require.cache).forEach(function(id) {
-      if (/(server|api|models)/.test(id)) delete require.cache[id];
+      if (/(server|api|models|database)/.test(id)) delete require.cache[id];
     });
 
     startServer(require("./server"));
