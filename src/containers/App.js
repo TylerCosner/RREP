@@ -9,7 +9,7 @@ class App extends React.Component {
     this.props.dispatch(userLogin());
   }
   render() {
-    fetch("/api/gay")
+    fetch("/api/todos")
       .then((response) => response.json())
       .then((json) => console.log(json))
       .then(console.log(this.props));

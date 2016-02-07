@@ -14,6 +14,7 @@ COPY .babelrc /app/.babelrc
 COPY .eslintignore /app/.eslintignore
 COPY .eslintrc /app/.eslintrc
 COPY webpack.config.js /app/webpack.config.js
+COPY migrations /app/migrations
 
 RUN npm run build
 
