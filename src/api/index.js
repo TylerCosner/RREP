@@ -7,5 +7,5 @@ export default (app) => {
     .map(route => route.slice(7, -3));                            // Remove 'api' from the front and '.js' from the back.
 
   // Api now matches folder structure!
-  routes.map(route => app.use("/api" + route, require("." + route).default)); 
+  routes.map(route => app.use("/api" + route, require("." + route).default));
 };

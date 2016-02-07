@@ -1,9 +1,9 @@
 import express from "express";
+import Todo    from "../models/Todo";
 
 var router = express.Router();
 
 router.get("/", (req, res) => {
-  var Todo = require("../models/Todo").default;
   Todo.fetchAll()
     .then((todos) => {
       res.json(todos);

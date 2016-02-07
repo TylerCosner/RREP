@@ -4,22 +4,21 @@ import {connect} from "react-redux";
 import {userLogin} from "../actions/user";
  
 class App extends React.Component {
-  
   componentDidMount() {
     this.props.dispatch(userLogin());
   }
+
   render() {
-    fetch("/api/todos")
-      .then((response) => response.json())
-      .then((json) => console.log(json))
-      .then(console.log(this.props));
+    fetch("/api/todos");
+
+    console.log(this.props);
     return (
       <div>
-        <Header user={this.props} />
+        <Header user={this.props.user} />
         {this.props.children}
       </div>
     );
   }
 }
 
-export default connect(state => ({name: state.name}))(App);
+export default connect(state => ({user: state.user}))(App);

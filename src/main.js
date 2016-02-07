@@ -17,6 +17,8 @@ import "./styles/main.scss";
 import * as reducers from "./reducers";
 import routes from "./routes";
 
+console.log(reducers);
+
 const history = createHistory();
 const middleware = syncHistory(history);
 const reducer = combineReducers({
